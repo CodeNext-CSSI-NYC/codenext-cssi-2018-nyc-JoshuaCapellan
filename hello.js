@@ -1,1 +1,3 @@
-// Author: FirstName LastName
+// Author: Joshua Capellan
+
+console.log ("Hello World!");
