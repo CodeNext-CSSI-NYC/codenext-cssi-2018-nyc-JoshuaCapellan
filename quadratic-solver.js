@@ -1,6 +1,6 @@
 // We will write a program to find the factors of quadratic equations using the quadratic formula
 // Recall that a quadratic equation has the form a*x^2 + b*x + c = 0
-// For more see: https://en.wikipedia.org/wiki/Quadratic_equation
+// For more see: https:// 
 
 // Here is where you will set the coefficients
 const a = 1;
@@ -10,14 +10,14 @@ const c = -35;
 // Fill in the code below based on the quadratic formula
 // Hint: for this next line, you will need to use a math concept that we haven't talked about.
 // Luckily, the operation you need is one google search away!
-const discriminant = ;
+const discriminant = Math.sqrt(b ** 2 - 4*a*c);
 
 // There are two numerators and two answers because of the plus-minus
-const numerator1 = ;
-const numerator2 = ;
-const denominator = ;
-const answer1 = ;
-const answer2 = ;
+const numerator1 = -1*b + discriminant;
+const numerator2 = -1*b - discriminant;
+const denominator = 2*a;
+const answer1 = numerator1/denominator;
+const answer2 = numerator2/denominator;
 
 // You should see 5 and -7
 console.log(answer1);
