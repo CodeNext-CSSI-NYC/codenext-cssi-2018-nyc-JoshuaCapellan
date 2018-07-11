@@ -21,17 +21,24 @@ else if (compNum > 2 && compNum < 3){
 
 var userChoice = readline.question(userName + " what is your choice (rock, paper, or scissors)?: ");
 
-if (userChoice == "rock" && compChoice !== "rock"){
+if (userChoice == "rock" && compChoice == "scissors"){
 	console.log("Congratulations " + userName + "! You won!");
 }
 
-else if (userChoice == "paper" && compChoice !== "paper"){
+else if (userChoice == "paper" && compChoice == "rock"){
 	console.log("Congratulations " + userName + "! You won!");
 }
 
-else if (userChoice == "scissors" && compChoice !== "scissors"){
+else if (userChoice == "scissors" && compChoice == "paper"){
 	console.log("Congratulations " + userName + ", you won!");
 }
-else{
+
+else if (userChoice == compChoice){
+	console.log(userName + " you tied!");
+}
+
+else {
 	console.log("Sorry " + userName + ", you lost.");
 }
+
+console.log("The computer chose: " + compChoice + ".");
