@@ -11,7 +11,7 @@ var userName = readline.question("User, what is your name: ");
 
 var result;
 
-let num = Math.random()
+let num = Math.random();
 if (num < 0.5){
 	result = "heads";
 }
