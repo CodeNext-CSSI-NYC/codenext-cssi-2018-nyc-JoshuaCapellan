@@ -31,7 +31,7 @@ var readline = require("readline-sync");
 //	// x = parseFloat(readline.question("Pick a number: "));
 //	// y = parseFloat(readline.question("Pick a number: "));
 // 	if (x > y) { 
-// 		console.log(x + " is the greate number.");
+// 		console.log(x + " is the greater number.");
 // 	}
 // 	else { 
 // 		console.log(y + " is the greater number.");

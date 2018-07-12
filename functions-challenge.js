@@ -24,7 +24,7 @@ sumDouble(2, 2) → 8
  console.log(sumDouble (5, 3));
  console.log(sumDouble (2, 2));
  console.log(sumDouble (9, 7));
- 
+
 // // Test out your function using our provided tests by uncommenting the line testSumDouble() at the very bottom of this file
 
 // *****************************************************************************
@@ -69,7 +69,7 @@ parrotTrouble(false, 6) → false
 
 // Declare your function here
 function parrotTrouble(talking, hour){
-  if(talking = true && hour > 20 || talking == true && hour < 7){
+  if(talking == true && hour > 20 || talking == true && hour < 7){
     return true;
   } else {
     return false;
