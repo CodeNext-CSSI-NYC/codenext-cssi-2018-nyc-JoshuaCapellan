@@ -46,7 +46,7 @@ function lastTwo(str) {
 		let restOfWord = str.substring(0, (str.length - 2));
 		let secondToLastLetter = str.charAt(str.length -2);
 		let lastLetter = str.charAt(str.length - 1);
-		return (console.log(restOfWord + lastLetter + secondToLastLetter));
+		return restOfWord + lastLetter + secondToLastLetter;
 	} else {
 		return str;
 	}
