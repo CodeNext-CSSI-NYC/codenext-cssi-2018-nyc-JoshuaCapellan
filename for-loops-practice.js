@@ -43,7 +43,12 @@ for (var i = 300; i <= 350; i++) {
 // 4. Write a function that, given a string of any length,
 // returns true if it contains at least one space.
 function containsSpace(str) {
-
+	let spaces = str.indexOf(" ");
+	if (spaces == 0){
+		return false;
+	} else {
+		return true;
+	}
 }
 
 // Some tests
@@ -59,9 +64,9 @@ function countAs(str) {
 
 }
 // Some tests
-console.log(countAs("happy") == 1);
-console.log(countAs("lady gaga") == 3);
-console.log(countAs("") == 0);
+// console.log(countAs("happy") == 1);
+// console.log(countAs("lady gaga") == 3);
+// console.log(countAs("") == 0);
 
 
 
@@ -78,11 +83,11 @@ function reverseString(str) {
 
 }
 // Some tests
-console.log(reverseString("banana") == "ananab");
-console.log(reverseString("Was it a car or a cat I saw?") == "?was I tac a ro rac a ti saW");
-console.log(reverseString("doorag") == "garood");
-console.log(reverseString("a") == "a");
-console.log(reverseString("") == "");
+// console.log(reverseString("banana") == "ananab");
+// console.log(reverseString("Was it a car or a cat I saw?") == "?was I tac a ro rac a ti saW");
+// console.log(reverseString("doorag") == "garood");
+// console.log(reverseString("a") == "a");
+// console.log(reverseString("") == "");
 
 
 
@@ -93,7 +98,7 @@ function isPrime(num) {
 
 }
 // Here are some tests -- add more
-console.log(isPrime(89) == true);
-console.log(isPrime(91) == false);
-console.log(isPrime(89) == true);
-console.log(isPrime(91) == false);
+// console.log(isPrime(89) == true);
+// console.log(isPrime(91) == false);
+// console.log(isPrime(89) == true);
+// console.log(isPrime(91) == false);
