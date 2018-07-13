@@ -44,7 +44,7 @@ for (var i = 300; i <= 350; i++) {
 // returns true if it contains at least one space.
 function containsSpace(str) {
 	let spaces = str.indexOf(" ");
-	if (spaces == 0){
+	if (spaces == -1){
 		return false;
 	} else {
 		return true;
@@ -52,21 +52,30 @@ function containsSpace(str) {
 }
 
 // Some tests
-console.log(containsSpace("star wars") == true);
-console.log(containsSpace("     ") == true);
-console.log(containsSpace("apple") == false);
-console.log(containsSpace("") == false);
+// console.log(containsSpace("star wars") == true);
+// console.log(containsSpace("     ") == true);
+// console.log(containsSpace("apple") == false);
+// console.log(containsSpace("") == false);
 
 
 
 // 5. Given a string of any length, return the total number of times "a" or "A" appears.
-function countAs(str) {
 
+function countAs(str) {
+	let countofa = 0;	
+		for (var i = 0; i < str.length; i++) {
+			if (str.charAt(i) == "a" || str.charAt(i) == "A"){
+				countofa++;
+			}
+		}
+
+	return countofa;
 }
+
 // Some tests
-// console.log(countAs("happy") == 1);
-// console.log(countAs("lady gaga") == 3);
-// console.log(countAs("") == 0);
+console.log(countAs("happy") == 1);
+console.log(countAs("lady gaga") == 3);
+console.log(countAs("") == 0);
 
 
 
@@ -76,6 +85,7 @@ function countAs(str) {
 // 3 (start), 4 (diff), and 6 (numTerms), then it should print out:
 // 3, 7, 11, 15, 19, 23
 // Because it starts at 3, each term goes up by 4, and there are 6 terms.
+
 
 
 // 7. Given a string of any length, return a new string that is a copy of that string in reverse.
