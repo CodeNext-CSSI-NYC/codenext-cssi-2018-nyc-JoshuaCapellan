@@ -51,7 +51,7 @@ if (options[index] == "United States History"){
 		if(prompt9 == "13"){
 			score++;
 		}
-	let prompt10 = readline.question("Give the full name of the man who discovered America: ");
+	let prompt10 = readline.question("Give the first and last name of the man who discovered America: ");
 		if(prompt10 == "Christopher Columbus" || prompt10 == "christopher colombus"){
 			score++;
 		}
@@ -70,12 +70,30 @@ else if (options[index] == "Basketball"){
 		if (q3 == "Philadelphia" || q3 == "76ers" || q3 == "6ers"){
 			score++;
 		}
-	let q4 = readline.question("What team does Terry Rozier play for? ");
+	let q4 = readline.question("What team does Kyrie Irving play for? ");
 		if (q4 == "Celtics" || q4 == "Boston"){
 			score++;
 		}
 	let q5 = readline.question("What team did Kobe Bryant play for? ");
 		if (q5 == "Lakers" || q5 == "Los Angeles"){
+			score++;
+		}
+	let q6 = parseFloat(readline.question("What number did Michael Jordan wear before he left the NBA? "));
+		if (q6 == "23"){
+			score++;
+		}
+	let q7 = readline.question("Which position is usually the talles player on the team? ");
+		if (q7 == "center" || q7 == "Center"){
+			score++;
+		}
+	let q8 = parseFloat(readline.question("What is the highest amount of points scored in a game in the NBA? "));
+		if (q8 == "100" || q8 == "100 points");
+	let q9 = readline.question("What is the name of the women's version of the NBA? ");
+		if (q9 == "WNBA" || q9 == "wnba"){
+			score++;
+		}
+	let q10 = parseFloat(readline.question("How many points is a shot behind the arc worth? "));
+		if (q10 == "3"){
 			score++;
 		}
 }
