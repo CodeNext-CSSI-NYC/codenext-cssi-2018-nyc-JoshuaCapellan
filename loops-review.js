@@ -1,6 +1,7 @@
 // Author: Joshua Capellan
 let randomInt = require("random-int");
 let readline = require("readline-sync");
+console.clear();
 
 // 1. We did this last time, but we are going to do it again to make sure you can.
 // Do not look back and copy. Then you would not be learning.
@@ -45,13 +46,16 @@ let readline = require("readline-sync");
 // add up to more than 100 in total.
 // For example, it might end after two times through the loop if I type 77, 44.
 // But it might take many more attempts if I type 1, 1, 1, 1, 1 ....
-let sum = 0;
-let nums = parseFloat(readline.question("Please enter a number: "));
-sum = sum + nums;
+// let sum = 0;
+// let nums = parseFloat(readline.question("Please enter a number: "));
+// sum = sum + nums;
 
-while (sum <= 100){
-	nums = parseFloat(readline.question("Please enter a number: "));
-}
+// while (sum <= 100){
+// 	let nums = parseFloat(readline.question("Please enter a number: "));
+// 	sum = sum + nums;
+// }
+
+// console.log("That/those number(s) exceeds 100, they add up to " + sum + ".");
 
 
 // 5a. Use a loop to make this pattern:
@@ -61,6 +65,13 @@ while (sum <= 100){
 // ****
 // *****
 // ******
+
+// let arr = ["*", "**", "***", "****", "*****", "******"];
+
+// for (var i = 0; i < arr.length; i++) {
+// 	let lines = arr[i];
+// 	console.log(lines);
+// }
 
 
 // 5b. Use a loop to make this pattern:
@@ -79,6 +90,14 @@ while (sum <= 100){
 // ***********
 //
 
+// let arr2 = ["***********", "***********", "***********", "***********", "***********", "***********", "***********"];
+
+// for (var i = 0; i < arr2.length; i++) {
+// 	let lines = arr2[i];
+//  	console.log(lines);
+//  	console.log(" ");
+// }
+
 
 // 6. Use this line:
 // let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -88,6 +107,11 @@ while (sum <= 100){
 // Then, print out the toLowerCase() version of each letter.
 // You should see the alphabet, in lower case, with a new letter on each line.
 
+// let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// for (var i = 0; i < alphabet.length; i++) {
+// 	let letters = alphabet[i];
+// 	console.log(letters.toLowerCase());
+// }
 
 
 // 7. Last time we listed out all of the factors of a number.
@@ -103,3 +127,26 @@ while (sum <= 100){
 // values from 1 to number - 1 and add together all the ones that are factors of
 // number. Return true if this sum is equal to number, false otherwise.
 // Make sure it returns true for 6 and 28 and false for pretty much anything else.
+
+let sum = 0;
+
+function factors (num) {
+	num = readline.question("Please enter a number to learn if its a perfect number: ");
+	let factors = [];
+	for (var i = 1; i < num; i++) {
+		 if (num % i == 0){
+			factors.push(i);
+		} 
+	}
+	for (var i = 0; i < factors.length; i++) {
+		sum += factors[i];
+	}
+
+	if(sum == num){
+		console.log("True");
+	} else {
+		console.log("False");
+	}
+}
+
+factors();

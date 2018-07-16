@@ -69,13 +69,13 @@ let readline = require("readline-sync");
 // You will need to do this on two separate lines.
 // How many numbers should be in your array when the for loop is done?
 // Print out the array and the array's length at the end and make sure you are right.
-let emptyArr2 = [];
-for (var i = 0; i < 10; i++) {
-	while (emptyArr2.length < 2){
-		emptyArr2.push("7");
-	}
-	emptyArr2.push(randomInt(1, 6));
-}
+// let emptyArr2 = [];
+// for (var i = 0; i < 10; i++) {
+// 	while (emptyArr2.length < 2){
+// 		emptyArr2.push("7");
+// 	}
+// 	emptyArr2.push(randomInt(1, 6));
+// }
 
 // console.log(emptyArr2);
 
