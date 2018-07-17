@@ -1,8 +1,7 @@
-// Create a new file called trivia.js.
-// Ask the user questions about anything you want, and then tell them if their answers are right or wrong. You can ask many questions in one file.
-// Bonus: Keep score and tell them at the end something like: "You answered __ correctly out of a possible ____."
-// Have you classmates play your game and see how they do.
+// Author: Joshua Capellan
+// This is my trivia game.
 
+console.clear();
 var readline = require("readline-sync");
 
 var userName = ("Welcome to Trivia User, what is your name? ");
@@ -82,12 +81,14 @@ else if (options[index] == "Basketball"){
 		if (q6 == "23"){
 			score++;
 		}
-	let q7 = readline.question("Which position is usually the talles player on the team? ");
+	let q7 = readline.question("Which position does the tallest player on a team usually? ");
 		if (q7 == "center" || q7 == "Center"){
 			score++;
 		}
-	let q8 = parseFloat(readline.question("What is the highest amount of points scored in a game in the NBA? "));
-		if (q8 == "100" || q8 == "100 points");
+	let q8 = parseFloat(readline.question("What is the highest amount of points individually scored in a game in the NBA? "));
+		if (q8 == "100" || q8 == "100 points"){
+			score++;
+		}
 	let q9 = readline.question("What is the name of the women's version of the NBA? ");
 		if (q9 == "WNBA" || q9 == "wnba"){
 			score++;
@@ -98,7 +99,7 @@ else if (options[index] == "Basketball"){
 		}
 }
 
-console.log("Your score was " + score + ".");
+console.log("Your score was " + score + " of 10.");
 
 
 
