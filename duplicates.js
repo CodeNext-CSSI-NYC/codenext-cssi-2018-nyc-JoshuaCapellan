@@ -16,15 +16,19 @@ function hasDuplicate(arr) {
 	for (var i = 0; i < arr.length; i++) {
 		let word = arr[i];
 		for (var j = 0; j < arr.length; j++) {
-			if (word[j] != undefined){
+			let word2 = arr[j];
+			if (word2 == word && i != j){
 				return true;
 			}
 		}
 	} 
+	return false;
 }
 
-let arr2 = ["h", "d", "l"];
-console.log(hasDuplicate(arr2));
+let testarray = [0, 7, 0, 1, 0, 3];
+let testarray2 = [7, 1, 3];
+// console.log(hasDuplicate(testarray));
+// console.log(hasDuplicate(testarray2));
 
 // Here are some examples you can use to test
 // let arr1 = [3,4,5,6,7,1,2,5,9];
@@ -37,10 +41,20 @@ console.log(hasDuplicate(arr2));
 // tells you which items in the array are duplicated.
 // For example, in [3,4,5,6,7,1,2,5,9] the only duplicate is 5
 // However, in [3,4,5,4,7,4,2,5,9] the duplicates are 5 and 4 (which appears three times)
-function listDuplicates(arr) {
+let arrDuplicates = [];
 
+function listDuplicates(arr) {
+	for (var i = 0; i < arr.length; i++) {
+		for (var j = 0; j < arr.length; j++) {
+			if (arr[i] == arr[j]){
+				return arr[i];
+			}
+		}
+	}
 }
 
+// console.log(listDuplicates(testarray));
+// console.log(listDuplicates(testarray2));
 
 
 
