@@ -13,8 +13,19 @@ console.clear();
 
 // Get a basic version of this working. You should return true if there is at least one duplicated value.
 function hasDuplicate(arr) {
-
+	for (var i = 0; i < arr.length; i++) {
+		let word = arr[i];
+		for (var j = 0; j < arr.length; j++) {
+			if (word[j] != undefined){
+				return true;
+			}
+		}
+	} 
 }
+
+let arr2 = ["h", "d", "l"];
+console.log(hasDuplicate(arr2));
+
 // Here are some examples you can use to test
 // let arr1 = [3,4,5,6,7,1,2,5,9];
 // let arr2 = ["apple", "banana", "pear", "banana"];

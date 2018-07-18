@@ -99,7 +99,7 @@ function fruitsThere(arr, str){
 	return false;
 }
 
-console.log(fruitsThere(celticsRoster, "Kyrie"));
+console.log(fruitsThere(celticsRoster, "Yabuselemhjrih4huivhei"));
 
 
 
