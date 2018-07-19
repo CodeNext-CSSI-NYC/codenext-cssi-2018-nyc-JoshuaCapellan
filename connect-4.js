@@ -39,13 +39,43 @@ function displayEmptyGrid () {
 // validColumnNumber(num) function that tells you whether or not the passed in
 // number is between 0-6.
 
+var columnIsFull;
+var columnValid;
+var fridIsFull = false;
+let firstPlayerMove = "X";
+let SecondPlayerMove = "O";
+
 function isColumnFull (arr, colNumber) {
-  
+  columnIsFull = true;
+  for (var row = 0; row < arr.length; row++) {
+    if (arr[row][colNumber] == "_") {
+      columnIsFull = false;
+    }
+  }
+  return columnIsFull;
 }
 
-function playerMove (arr, column) {
-  
+function validColumnNumber (colNumber) {
+  if (colNumber <= 6 && colNumber >= 0){
+    columnValid = true;
+  } else {
+    columnValid = false;
+  }
 }
+
+// Make while loop that goes through column and checks for first empty spot.
+// function player1Move (arr, column) {
+//   for (var row = 0; row < arr.length; row++) {
+//     arr[row][column] += FirstPlayerMove;
+//   }
+// }
+
+// function player2Move (arr, column) {
+//   for (var row = 0; row < arr.length; row++) {
+//     arr[row][column] += SecondPlayerMove;
+//   }
+
+// }
 
 // Here is an array that is almost full, which will be useful when you are testing
 // this and other functions.
@@ -59,6 +89,8 @@ let almostFullArray = [
   ["X", "X", "X", "X", "X", "X", "X"]
 ];
 
+// console.log(isColumnFull(almostFullArray, 3));
+
 
 // 3. At this point, if everything in #2 works, you should (as the player) be able
 // to keep typing in column numbers and see the connect 4 grid slowly fill up with
@@ -67,6 +99,10 @@ let almostFullArray = [
 // is even a single _, then it should return false. Now, use this function to stop
 // asking the user which column they want to play in when the grid is full.
 
+// Make loop that goes through each column and essentially runs isColumnFull for every column and then returns true if every column is full.
+function isFull(arr) {
+
+}
 
 
 // 4. The next step is to alternate which player's turn it is. It might be easier
