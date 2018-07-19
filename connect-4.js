@@ -39,6 +39,10 @@ function displayEmptyGrid () {
 // validColumnNumber(num) function that tells you whether or not the passed in
 // number is between 0-6.
 
+function isColumnFull (arr, colNumber) {
+  
+}
+
 function playerMove (arr, column) {
   
 }
