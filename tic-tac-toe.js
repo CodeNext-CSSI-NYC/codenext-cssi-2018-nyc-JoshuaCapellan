@@ -154,7 +154,14 @@ function isBoardFull() {
   return true;
 }
 
+// row = ask
+// col = ask
 
+// while (!isValid(row, col)) {
+//   row = ask
+//   col = ask
+// }
+// arr[row][col] = player;
 
 
 // You can put a greeting here if you want to
@@ -164,10 +171,12 @@ console.log("Welcome Users, today you will be playing tic-tac-toe.");
 // Inside, you need to figure out a way to ask whoever's turn it is to make a move.
 // You should probably do this by asking for a row and column separately.
 function playerMove (row, column) {
-  row = parseInt(readline.question("What row would you like to go in? "));
-  column = parseInt(readline.question("What column would you like to go in? "));
+  while(!validMove(row, column)){
+    row = parseInt(readline.question("What row would you like to go in? "));
+    column = parseInt(readline.question("What column would you like to go in? "));
+  }
+  
   board[row][column] = player;
-  switchPlayer();
 }
 
 // Ideally, you should check to make sure they entered 0-2 as row and as column,
@@ -179,7 +188,11 @@ function validMove (row, column) {
     row = parseInt(readline.question("What row would you like to go in? "));
   } else if (column != 0 && column != 1 && column != 2) {
     column = parseInt(readline.question("What column would you like to go in? "));
-  }
+  } 
+}
+
+function isSpotFull (row, column) {
+
 }
 
 // You should update the board with an "X" or "O" in the right spot
