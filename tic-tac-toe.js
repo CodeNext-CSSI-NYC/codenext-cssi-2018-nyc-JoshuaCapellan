@@ -2,6 +2,12 @@
 // At the start, each spot in each array will be filled in with an underscore: "_"
 // When players make their moves, we will replace the "_" with either "X" or "O".
 
+console.clear();
+let readline = require('readline-sync');
+let randomInt = require('random-int');
+let row = parseInt(readline.question("What row would you like to go in? "));
+let column = parseInt(readline.question("What column would you like to go in? "));
+
 // I reference something called null a lot below. null is a special term in JavaScript
 // that should be used without quotes. You can search online to read more about it.
 
@@ -152,18 +158,28 @@ function isBoardFull() {
 
 
 // You can put a greeting here if you want to
+console.log("Welcome Users, today you will be playing tic-tac-toe.");
 
 // To actually play the game, we will use a while loop.
 // Inside, you need to figure out a way to ask whoever's turn it is to make a move.
 // You should probably do this by asking for a row and column separately.
-
+function playerMove (row, column) {
+  row = parseInt(readline.question("What row would you like to go in? "));
+  column = parseInt(readline.question("What column would you like to go in? "));
+  board[row][column] = player;
+  switchPlayer();
+}
 
 // Ideally, you should check to make sure they entered 0-2 as row and as column,
 // and that the spot they pick is actually empty. You could make a validMove()
 // function to check that stuff and ask them again if they try to make an invalid move.
 // You could also save that for later and be sure to only make valid moves for now.
-function validMove () {
-  
+function validMove (row, column) {
+  if (row != 0 && row != 1 && row != 2) {
+    row = parseInt(readline.question("What row would you like to go in? "));
+  } else if (column != 0 && column != 1 && column != 2) {
+    column = parseInt(readline.question("What column would you like to go in? "));
+  }
 }
 
 // You should update the board with an "X" or "O" in the right spot
